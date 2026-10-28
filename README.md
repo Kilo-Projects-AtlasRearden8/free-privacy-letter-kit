@@ -10,19 +10,28 @@ Made by **Asdale Dynamics, LLC** (Indiana, formed October 2026).
 |--------|---------------|
 | [AI training opt-out](print/ai-training-opt-out.html) | Ask AI companies not to use your content or personal data to train generative AI models |
 | [Data-broker opt-out](print/data-broker-opt-out.html) | Ask data brokers and people-search sites to remove your personal information and stop selling it |
-| [Marketing email opt-out](print/marketing-email-opt-out.html) | Ask companies to stop marketing emails and add you to their do-not-mail list |
+| [Marketing email opt-out](print/marketing-email-opt-out.html) | Ask companies to stop marketing emails and add your address to their do-not-mail list |
 
 Each letter is:
-- **Fillable** — type into fields on screen, then print.
-- **Printable** — screen buttons and headers hide automatically when you print (Ctrl+P / Cmd+P).
+- **Fillable** — fill in your details on screen. As you type, the printable letter below fills in automatically. Then print (Ctrl+P / Cmd+P) or save as PDF. No JavaScript account, no signup — just a free printable template you keep locally.
+- **Printable** — screen buttons and headers hide automatically when you print.
 - **Free** — no account, no signup, no tracking.
 
-## How to use
+## How to use (in plain English)
 
-1. Open a letter in your browser.
-2. Fill in the fields: your name, address, the company, and your account details.
-3. Print or save as PDF, then sign and send per the company's instructions.
-4. Keep a copy for your records.
+1. Open any letter in your browser.
+2. Fill in the fields: your name, address, the company you're writing to, and your account or email details.
+3. Watch the printable letter below fill in as you type.
+4. Print (Ctrl+P / Cmd+P) or save as PDF, then sign the letter and send it per the company's instructions (address, email, or web form — check the company's website).
+5. Keep a copy for your records.
+
+Want to fill it out by hand instead? Just print without typing — the letter prints with blank dotted lines you can fill in with a pen.
+
+## Before you send
+
+- Check the company's website for their exact opt-out address, email, or form. Sending it to the wrong department can slow things down.
+- Send it by a method you can confirm — certified mail or an email where you keep a read receipt — if you want proof of delivery.
+- Keep your copy plus any confirmation you receive. That paper trail matters if you ever need to follow up.
 
 ## Markdown sources
 

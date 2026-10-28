@@ -7,17 +7,16 @@ Education only, not legal advice. Printable, no account needed. No tracking.
 
 Files:
 - `LICENSE` — MIT License, copyright line exactly `Copyright (c) 2026 Asdale Dynamics, LLC`
-- `README.md` — overview, how to use, education-only disclaimer, credit to Asdale Dynamics, LLC
+- `README.md` — overview, how to use, before-you-send tips, education-only disclaimer, credit to Asdale Dynamics, LLC
+- `STATUS.md` — this file
 - `.gitignore` — standard ignore rules (no secrets committed)
 - `css/style.css` — shared screen + print CSS (`@media print` hides screen-only UI; `@page size: letter`)
-- `print/index.html` — kit landing page linking to all three letters
+- `js/letter-form.js` — zero-dependency script that mirrors typed form fields into the printable letter in real time, plus today's date default (graceful degrade: prints blank dotted lines for handwriting if JS is unavailable)
+- `print/index.html` — kit landing page linking to all three letters, plus how-to, before-you-send, and about sections
 - `print/ai-training-opt-out.html` — fillable letter asking AI companies not to train generative AI models on your content or personal data
 - `print/data-broker-opt-out.html` — fillable letter asking data brokers/people-search sites to remove your personal information and stop selling it
 - `print/marketing-email-opt-out.html` — fillable letter asking companies to stop marketing emails and honor a do-not-mail list
-- `markdown/ai-training-opt-out.md` — Markdown source with bracketed fill-in fields
-- `markdown/data-broker-opt-out.md` — Markdown source with bracketed fill-in fields
-- `markdown/marketing-email-opt-out.md` — Markdown source with bracketed fill-in fields
-- `STATUS.md` — this file
+- `markdown/ai-training-opt-out.md`, `markdown/data-broker-opt-out.md`, `markdown/marketing-email-opt-out.md` — Markdown sources with bracketed fill-in fields
 
 No account needed. No tracking. No secrets, API keys, or personal data (only placeholder examples). No `.github/workflows`.
 
@@ -32,12 +31,14 @@ print/data-broker-opt-out.html
 print/marketing-email-opt-out.html
 ```
 
-Type into the fields on screen, then print (Ctrl+P / Cmd+P) or save as PDF. Print styles hide buttons/headers automatically and size to US Letter. Markdown files are plain-text sources with [BRACKETED] fill-in fields; no build step required.
+Fill in your details on screen — the printable letter below fills in as you type — then print (Ctrl+P / Cmd+P) or save as PDF. Sign and send per the company's instructions. Print without typing to get blank dotted lines for handwriting. Markdown files are plain-text sources; no build step required.
 
 ## Verification results
 
-- All 4 HTML files parse as well-formed (Python `html.parser` check): **OK**
-- All internal `href` targets resolve: **OK** (fixed `print/index.html` CSS link from `css/style.css` to `../css/style.css`)
+- All 4 HTML files parse as well-formed (Python `html.parser` check): **OK** for index.html, ai-training-opt-out.html, data-broker-opt-out.html, marketing-email-opt-out.html
+- All internal `href` targets resolve: **OK**
+- `js/letter-form.js` passes `node --check` syntax check: **OK**
+- All 3 Markdown sources + README render without error (python-markdown): **OK**
 - `LICENSE` copyright line is exactly `Copyright (c) 2026 Asdale Dynamics, LLC`: **OK**
 - README credits Asdale Dynamics, LLC and includes education-only/not-legal-advice disclaimer: **OK**
 - No `.github/workflows` directory: **OK**
@@ -46,7 +47,8 @@ Type into the fields on screen, then print (Ctrl+P / Cmd+P) or save as PDF. Prin
 
 ## Known gaps
 
-- No automated test suite (static site; validation done via parser check above)
+- No automated test suite (static site; validation done via the checks above)
 - Print appearance not rendered to PDF visually; relies on `@media print` CSS (verified present, not rendered)
 - Letters are templates, not legal documents; company opt-out processes and applicable laws vary — users must verify where to send each letter
 - Markdown sources are not auto-generated from HTML; kept in sync manually
+- Markdownlint style notes (line length, table pipes, list spacing) match the sibling reference kits' baseline and are not treated as failures
